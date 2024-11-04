@@ -22,14 +22,11 @@ import java.util.stream.Collectors;
 import jakarta.validation.Valid;
 import org.springframework.validation.Errors;
 
-
-
 @Slf4j
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
-
 
     @ModelAttribute
     public void addIngredientsToModel(Model model){
@@ -71,7 +68,7 @@ public class DesignTacoController {
     }
 
 
-/*
+
   @PostMapping
   public String processTaco(Taco taco,
   			@ModelAttribute TacoOrder tacoOrder) {
@@ -80,23 +77,21 @@ public class DesignTacoController {
 
     return "redirect:/orders/current";
   }
- */
 
 
-    @PostMapping
-    public String processTaco(
-            @Valid Taco taco, Errors errors,
-            @ModelAttribute TacoOrder tacoOrder) {
-
-        if (errors.hasErrors()) {
-            return "design";
-        }
-
-        tacoOrder.addTaco(taco);
-        log.info("Processing taco: {}", taco);
-
-        return "redirect:/orders/current";
-    }
+//
+//    @PostMapping
+//    public String processTaco(
+//            @Valid Taco taco, Errors errors,
+//            @ModelAttribute TacoOrder tacoOrder) {
+//
+//        if (errors.hasErrors()) {
+//            return "design";
+//        }
+//        tacoOrder.addTaco(taco);
+//        log.info("Processing taco: {}", taco);
+//        return "redirect:/orders/current";
+//    }
 
     private Iterable<Ingredient> filterByType(
             List<Ingredient> ingredients, Type type) {
