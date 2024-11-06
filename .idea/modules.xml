@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/demo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/demo.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mvc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mvc.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-in-actions_v2.iml" filepath="$PROJECT_DIR$/spring-in-actions_v2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/taco-cloud.main.iml" filepath="$PROJECT_DIR$/.idea/modules/taco-cloud.main.iml" />
     </modules>
