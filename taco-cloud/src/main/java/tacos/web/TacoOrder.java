@@ -1,13 +1,18 @@
-package tacos.data;
+package tacos.web;
 
 import lombok.Data;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
 @Data
-public class TacoOrder {
+public class TacoOrder implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+    private Long id;
     private String deliveryName;
     private String deliveryStreet;
     private String deliveryCity;
