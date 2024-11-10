@@ -10,5 +10,16 @@
         <module name="spring-mvc.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="data" target="17" />
+      <module name="data.main" target="17" />
+      <module name="data.test" target="17" />
+      <module name="demo" target="21" />
+      <module name="demo.main" target="21" />
+      <module name="demo.test" target="21" />
+      <module name="mvc" target="21" />
+      <module name="mvc.main" target="21" />
+      <module name="mvc.test" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>

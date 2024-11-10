@@ -1,4 +1,4 @@
-package tacos.data;
+package tacos.web;
 
 import lombok.Data;
 
