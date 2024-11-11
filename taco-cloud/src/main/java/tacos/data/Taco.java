@@ -1,4 +1,4 @@
-package tacos.web;
+package tacos.data;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -20,8 +20,8 @@ public class Taco {
     @Size(min=1, message="You must choose at least 1 ingredient")
     private List<Ingredient> ingredients;
 
-    public void addIngredient(Ingredient taco) {
-        this.ingredients.add(new IngredientRef(taco.getId()));
-    }
+//    public void addIngredient(Ingredient taco) {
+//        this.ingredients.add(new IngredientRef(taco.getId()));
+//    }
 
 }
