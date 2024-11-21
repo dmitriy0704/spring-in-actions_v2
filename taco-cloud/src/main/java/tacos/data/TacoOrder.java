@@ -5,6 +5,7 @@ import lombok.Data;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -13,6 +14,7 @@ public class TacoOrder implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
     private Long id;
+    private Date placedAt;
     private String deliveryName;
     private String deliveryStreet;
     private String deliveryCity;

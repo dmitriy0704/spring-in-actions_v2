@@ -54,20 +54,4 @@ public class JdbcIngredientRepository implements IngredientRepository {
                 row.getString("name"),
                 Type.valueOf(row.getString("type")));
     }
-
-//
-//    @Override
-//    public Ingredient findById(String id) {
-//        return jdbcTemplate.queryForObject(
-//                "select id, name, type from Ingredient where id=?",
-//                new RowMapper<Ingredient>() {
-//                    public Ingredient mapRow(ResultSet rs, int rowNum)
-//                            throws SQLException {
-//                        return new Ingredient(
-//                                rs.getString("id"),
-//                                rs.getString("name"),
-//                                Type.valueOf(rs.getString("type")));
-//                    };
-//                }, id);
-//    }
 }
