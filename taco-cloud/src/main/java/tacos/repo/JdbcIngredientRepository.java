@@ -20,13 +20,6 @@ public class JdbcIngredientRepository implements IngredientRepository {
     }
 
     @Override
-    public Iterable<Ingredient> findAll() {
-        return jdbcTemplate.query(
-                "select id, name, type from Ingredient",
-                this::mapRowToIngredient);
-    }
-
-    @Override
     public Optional<Ingredient> findById(String id) {
         List<Ingredient> results = jdbcTemplate.query(
                 "select id, name, type from Ingredient where id=?",
@@ -36,6 +29,16 @@ public class JdbcIngredientRepository implements IngredientRepository {
                 Optional.empty() :
                 Optional.of(results.get(0));
     }
+
+    @Override
+    public Iterable<Ingredient> findAll() {
+        return jdbcTemplate.query("select id, name, type from Ingredient",
+
+
+                this::mapRowToIngredient
+        );
+    }
+
 
     @Override
     public Ingredient save(Ingredient ingredient) {
