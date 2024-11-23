@@ -1,6 +1,9 @@
 package tacos.data;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -10,11 +13,15 @@ import java.util.List;
 
 
 @Data
+@Table
 public class TacoOrder implements Serializable {
-    @Serial
+
     private static final long serialVersionUID = 1L;
+    @Id
     private Long id;
     private Date placedAt;
+
+    @NotBlank(message = "Имя обязательно для заполнения")
     private String deliveryName;
     private String deliveryStreet;
     private String deliveryCity;
