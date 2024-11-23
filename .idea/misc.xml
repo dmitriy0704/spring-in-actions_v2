@@ -4,6 +4,8 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/demo" />
     <file type="web" url="file://$PROJECT_DIR$/mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-data" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-demo" />
     <file type="web" url="file://$PROJECT_DIR$/spring-mvc" />
     <file type="web" url="file://$PROJECT_DIR$/taco-cloud" />
   </component>
