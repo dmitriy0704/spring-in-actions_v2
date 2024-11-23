@@ -18,4 +18,8 @@ public class Ingredient implements Persistable<String> {
     private final Type type;
 
 
+    @Override
+    public boolean isNew() {
+        return true;
+    }
 }
