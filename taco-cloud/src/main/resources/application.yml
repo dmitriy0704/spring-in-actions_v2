@@ -2,7 +2,7 @@ spring:
   application:
     name: taco-cloud
   datasource:
-    url: jdbc:postgresql://localhost:5432/todos    # jdbc:h2:mem:testtask
+    url: jdbc:postgresql://localhost:5432/spring_in_actions    # jdbc:h2:mem:testtask
     username: postgres    # sa
     password: dv9899     # password
     driver-class-name: org.postgresql.Driver
