@@ -1,8 +1,8 @@
 package tacos.data;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.io.Serial;
@@ -13,12 +13,15 @@ import java.util.List;
 
 
 @Data
-@Table
+@Entity
 public class TacoOrder implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private Date placedAt;
 
     @NotBlank(message = "Имя обязательно для заполнения")
@@ -30,6 +33,8 @@ public class TacoOrder implements Serializable {
     private String ccNumber;
     private String ccExpiration;
     private String ccCVV;
+
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Taco> tacos = new ArrayList<>();
 
     public void addTaco(Taco taco) {
