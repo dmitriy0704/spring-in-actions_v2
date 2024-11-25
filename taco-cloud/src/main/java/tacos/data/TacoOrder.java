@@ -24,6 +24,9 @@ public class TacoOrder implements Serializable {
 
     private Date placedAt;
 
+    @ManyToOne
+    private MyUser user;
+
     @NotBlank(message = "Имя обязательно для заполнения")
     private String deliveryName;
     private String deliveryStreet;
@@ -34,7 +37,7 @@ public class TacoOrder implements Serializable {
     private String ccExpiration;
     private String ccCVV;
 
-    @ManyToMany(targetEntity=Taco.class)
+    @ManyToMany(targetEntity = Taco.class)
     private List<Taco> tacos = new ArrayList<>();
 
     public void addTaco(Taco taco) {
