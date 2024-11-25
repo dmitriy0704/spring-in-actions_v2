@@ -1,13 +1,10 @@
-package tacos.controller;
+package tacos.security;
 
-import jakarta.servlet.Registration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tacos.data.RegistrationForm;
-import tacos.repo.UserRepository;
 
 @Controller
 @RequestMapping("/register")

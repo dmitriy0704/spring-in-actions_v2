@@ -1,9 +1,6 @@
 package tacos.data;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -32,7 +29,7 @@ public class Taco {
     private String name;
 
     @Size(min=1, message="Вы должны выбрать хотя бы один ингредиент")
-    @ManyToAny
+    @ManyToMany(targetEntity=Ingredient.class)
     private List<Ingredient> ingredients = new ArrayList<>();
 
     public void addIngredient(Ingredient ingredient) {

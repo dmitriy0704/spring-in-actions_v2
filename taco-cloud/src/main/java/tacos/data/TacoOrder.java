@@ -34,7 +34,7 @@ public class TacoOrder implements Serializable {
     private String ccExpiration;
     private String ccCVV;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @ManyToMany(targetEntity=Taco.class)
     private List<Taco> tacos = new ArrayList<>();
 
     public void addTaco(Taco taco) {

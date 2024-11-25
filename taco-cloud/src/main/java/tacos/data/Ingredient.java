@@ -21,4 +21,5 @@ public class Ingredient{
     private Type type;
 
 
+
 }

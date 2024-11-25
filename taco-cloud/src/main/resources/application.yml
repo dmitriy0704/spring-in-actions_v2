@@ -2,12 +2,16 @@ spring:
   application:
     name: taco-cloud
   datasource:
-    url: jdbc:postgresql://localhost:5432/spring_in_actions    # jdbc:h2:mem:testtask
-    username: postgres    # sa
-    password: dv9899     # password
+    url: jdbc:postgresql://localhost:5432/spring_in_actions
+    username: postgres
+    password: dv9899
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
+  sql:
+    init:
+      platform: postgres
+      mode: always
