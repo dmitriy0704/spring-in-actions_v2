@@ -15,3 +15,11 @@ spring:
     init:
       platform: postgres
       mode: always
+server:
+  port: 9899
+
+logging:
+  level:
+    root: warn
+    org.springframework.security: debug
+
