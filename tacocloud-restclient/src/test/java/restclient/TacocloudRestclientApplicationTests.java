@@ -1,4 +1,4 @@
-package dev.folomkin.tacocloudrestclient;
+package restclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

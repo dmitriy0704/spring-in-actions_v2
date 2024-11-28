@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring-in-actions_v2.iml" filepath="$PROJECT_DIR$/spring-in-actions_v2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/taco-cloud.main.iml" filepath="$PROJECT_DIR$/.idea/modules/taco-cloud.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/tacocloud-restclient.main.iml" filepath="$PROJECT_DIR$/.idea/modules/tacocloud-restclient.main.iml" />
     </modules>
   </component>
 </project>

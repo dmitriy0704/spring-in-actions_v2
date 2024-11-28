@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tacocloud-restclient
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring_in_actions
+    username: postgres
+    password: dv9899
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  main:
+      web-application-type: none
+server:
+  port: 8089
