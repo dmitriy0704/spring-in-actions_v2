@@ -6,8 +6,7 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ManyToAny;
-
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,6 +16,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@RestResource(rel="tacos", path="tacos")
 public class Taco {
 
     @Id

@@ -24,6 +24,7 @@ repositories {
 }
 
 dependencies {
+    testImplementation 'org.springframework.restdocs:s-restdocs-mockmvc'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     compileOnly 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
@@ -37,7 +38,7 @@ dependencies {
     implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.1.0'
     // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '3.4.0'
-
+    implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.6.0'
     annotationProcessor 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.postgresql:postgresql'
