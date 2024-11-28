@@ -11,10 +11,10 @@ import restclient.data.Ingredient;
 
 @SpringBootApplication
 @Slf4j
-public class TacocloudRestclientApplication {
+public class RestClientApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TacocloudRestclientApplication.class, args);
+		SpringApplication.run(RestClientApp.class, args);
 	}
 
 	@Bean

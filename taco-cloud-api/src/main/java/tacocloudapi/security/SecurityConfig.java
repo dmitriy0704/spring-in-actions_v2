@@ -1,4 +1,4 @@
-package tacos.security;
+package tacocloudapi.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import tacos.data.MyUser;
+import tacocloudapi.data.MyUser;
 
 @Configuration
 public class SecurityConfig {
@@ -36,9 +36,8 @@ public class SecurityConfig {
                 .cors().disable()
                 .authorizeHttpRequests(
                         request -> request
-                                .requestMatchers(HttpMethod.POST, "/ingredients").hasRole("ADMIN")
-                                .requestMatchers(HttpMethod.DELETE, "/ingredients").hasRole("ADMIN")
-                                .requestMatchers("/design", "/orders/","/api/tacos").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/ingredients").permitAll()
+                                .requestMatchers(HttpMethod.DELETE, "/ingredients").permitAll()
                                 .requestMatchers("/", "/**").permitAll()
                 )
                 .formLogin(
