@@ -1,8 +1,8 @@
 spring:
   application:
-    name: taco-cloud-api
+    name: tacocloud-auth-server
   datasource:
-    url: jdbc:postgresql://localhost:5432/spring_in_actions?currentSchema=api
+    url: jdbc:postgresql://localhost:5432/spring_in_actions?currentSchema=auth_server
     username: postgres
     password: dv9899
     driver-class-name: org.postgresql.Driver
@@ -13,6 +13,9 @@ spring:
     show-sql: true
   data:
     rest:
-      base-path: /data-api
+      base-path: /auth-api
+
 server:
-  port: 8080
+  port: 9000
+
+
