@@ -29,6 +29,7 @@
       <module name="spring-mvc" target="21" />
       <module name="spring-mvc.main" target="21" />
       <module name="spring-mvc.test" target="21" />
+      <module name="tacocloud-messaging-jms" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
