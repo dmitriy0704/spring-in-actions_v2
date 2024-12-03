@@ -22,9 +22,6 @@ public class TacoOrder implements Serializable {
 
     private Date placedAt;
 
-    @ManyToOne
-    private MyUser user;
-
     @NotBlank(message = "Имя обязательно для заполнения")
     private String deliveryName;
     private String deliveryStreet;
